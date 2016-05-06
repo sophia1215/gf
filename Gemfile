@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.15'
+gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-sass'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -24,7 +26,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
+gem 'annotate'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -43,5 +46,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'better_errors'
+  gem 'letter_opener'
 end
 

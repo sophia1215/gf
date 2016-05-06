@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+
+/* Universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+  padding-bottom: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
