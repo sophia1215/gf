@@ -1,0 +1,18 @@
+<% if signed_in? %>
+<div class="col-sm3 col-md-2 sidebar">
+  <ul class="nav nav-sidebar">
+    <li class="<%= yield(:show_profile) %>">
+      <%#= link_to "檢視個人檔案", user_path(current_user) %>
+    </li>
+    <li class="<%= yield(:edit_profile) %>">
+    	<%= link_to "編輯個人檔案", edit_user_registration_path %>
+    </li>
+    <li class="<%= yield(:my_forums) %>">
+			<%#= link_to "我加入的討論版", account_groups_path(current_user) %>
+		</li>
+		<li class="<%= yield(:my_posts) %>">
+			<%#= link_to "我發表過的文章", account_posts_path(current_user) %>
+		</li>
+  </ul>
+</div>
+<% end %>

@@ -1,0 +1,48 @@
+<% provide(:faq, "active") %>
+<% provide(:title, "FAQs") %>
+
+<section id="sub-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 text-center">
+				<h1>問與答</h1>
+				<p class="lead">我們提供一些識別度高的 Ruby/Rails 面試題目供你參考 =)</p>
+			</div>
+		</div>
+	</div>
+	<div class="divider_top"></div>
+</section>
+
+<!-- Page Content -->
+<div class="container">
+	<!-- Page Heading/Breadcrumbs -->
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">FAQs
+				<small>問與答</small>
+			</h1>
+		</div>
+	</div>
+
+	<!-- Content Row -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel-group" id="accordion">
+				<% @faqs.each do |faq| %>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= faq.id %>"><%= faq.question %>
+							</a>
+						</h4>
+					</div>
+					<div id="collapse<%= faq.id %>" class="panel-collapse collapse">
+          	<div class="panel-body"><%= faq.answer %></div>
+          </div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+</div>

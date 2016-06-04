@@ -28,6 +28,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 gem 'annotate'
+gem 'simple_form'
+gem 'kaminari'
+gem 'devise'
+gem 'rolify'
+gem 'cancancan'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

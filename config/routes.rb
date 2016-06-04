@@ -1,5 +1,23 @@
 Rails.application.routes.draw do
 
+  # devise_for :users, :controllers => {
+  #   :registrations => "members/registrations",
+  #   :sessions => "members/sessions",
+  #   :passwords => "members/passwords",
+  #   :confirmations => "members/confirmations"
+  # }
+
+  devise_for :users
+
+  devise_scope :user do
+    get "sign_in", to: "devise/sessions#new"
+    get 'sign_up', to: "devise/registrations#new"
+    delete 'sign_out', to: "devise/sessions#destroy"
+  end
+
+  resources :users
+  resources :faqs
+
   root 'homes#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

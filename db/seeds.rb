@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+create_faqs = for i in 1..20 do
+                  Faq.create!([
+                  	question: "Question No.#{i}",
+                  	answer: "這是用種子建立的第 #{i} 個 Q&A"
+                  ])
+                end
